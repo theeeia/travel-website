@@ -1,0 +1,53 @@
+/*----------------------------------------------------------------------------*/
+/*#HEADER STYLE*/
+/*----------------------------------------------------------------------------*/
+.header {
+    transition: all 0.7s ease-in-out;
+    max-width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 99;
+
+    @media (max-width: $screen-md) { 
+        display: block;
+       
+        input[type="checkbox"]:checked ~ .nav__list {
+            transform: translateX(0);
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        align-items: center;
+    }
+
+    &__bg {
+        transition: all 1s ease-in-out;
+        background-color: #2d3c58; 
+        margin-top: -40px;
+        padding-bottom: 10px;
+    
+        @media (max-width: $screen-md) { margin-top: 0; }
+    
+        @media (max-width: $screen-xs) { padding-bottom: 10px; }    
+    }
+
+    &__logo {
+        @media (max-width: $screen-md) { 
+            position: absolute;
+            top: 20px;
+            line-height: 3em;
+            left: 15px;
+            max-width: 185px;
+            width: 40%;
+        }
+    }
+}
+
+
+
+

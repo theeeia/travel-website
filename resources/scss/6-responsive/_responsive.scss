@@ -1,0 +1,62 @@
+
+@include screen(xxxl) { }
+
+@include screen(xxl) { }
+
+@include screen(xl) { }
+
+@include screen(lg) { }
+
+@include screen(md) {
+    .py-md--50 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .mb-md--50 { margin-bottom: 50px; }
+
+    .mb-md--30 { margin-bottom: 30px; }
+
+    .mb-md--20 { margin-bottom: 20px; }
+
+    .txt-md--center { text-align: center; }
+ }
+
+@include screen(sm) {
+    .mb-sm--0 { margin-bottom: 0; }
+
+    .mb-sm--20 { margin-bottom: 20px; }
+
+    .mb-sm--30 { margin-bottom: 30px; }
+
+    .txt-sm--center { text-align: center; }
+
+    .gutters-sm {
+        margin-left:  -10px;
+        margin-right: -10px;
+      
+        .col,
+        [class*="col-"] {
+          padding-left:  10px;
+          padding-right: 10px;
+        }
+    }
+
+    .gutters-xs {
+        margin-left:  -7.5px;
+        margin-right: -7.5px;
+        
+        .col,
+        [class*="col-"] {
+            padding-left:  7.5px;
+            padding-right: 7.5px;
+        }
+    }
+
+}
+
+@include screen(xs) {}
+
+@include screen(xxs) {}
+
+@include screen(xxxs) {}

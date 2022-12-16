@@ -1,0 +1,100 @@
+/*----------------------------------------------------------------------------*/
+/*#QUOTE STYLE*/
+/*----------------------------------------------------------------------------*/
+
+.quote {
+    background: #FFFFFF;
+    box-shadow: 20px 20px 40px rgba(2, 9, 83, 0.06);
+    border-radius: 50px;
+    width: 100%;
+    padding: 100px 220px 50px;
+    z-index: 10;
+
+    @media (max-width: $screen-lg) { padding: 80px 150px 30px; }
+
+    @media (max-width: $screen-md) { padding: 50px 120px 20px; }
+
+    @media (max-width: $screen-sm) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $screen-xs) { padding: 30px 30px 5px 30px; }
+
+    blockquote {
+        position: relative;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 1.38;
+        text-align: justify;
+        color: #677086;
+        margin-bottom: 50px;   
+        z-index: 12;
+        
+        @media (max-width: $screen-md) { font-size: 24px;  }
+
+        @media (max-width: $screen-sm) { 
+            font-size: 22px; 
+            line-height: 1.27;  
+            margin-bottom: 30px;  
+        }
+
+        @media (max-width: $screen-xs) { font-size: 18px;  }
+        
+        &::before, &::after {
+            position: absolute;
+            margin-top: -25px;
+            content: url("../images/quote-left.svg");
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        &::before{
+            left: -110px;
+            @media (max-width: $screen-lg) { transform: scale(.8); }
+
+            @media (max-width: $screen-md) {
+                transform: scale(.7);
+                left: -90px;
+                }
+
+            @media (max-width: $screen-sm) { left: -20px; }
+
+            @media (max-width: $screen-xs) { left: -30px; }
+        }
+
+        &::after {
+            right: -110px;
+            transform: rotate(180deg);
+
+            @media (max-width: $screen-lg) { transform: rotate(180deg) scale(.8); }
+
+            @media (max-width: $screen-md) {
+                transform: rotate(180deg) scale(.7);
+                right: -90px;
+            }
+
+            @media (max-width: $screen-sm) { right: -20px; }
+
+            @media (max-width: $screen-xs) { right: -30px; }
+        }
+    }
+
+    &__user {
+        font-size: 34px;
+        line-height: 1.147;
+        color: #040E27;
+        text-align: start;
+        
+        @media (max-width: $screen-md) { font-size: 30px; }
+
+        @media (max-width: $screen-md) { font-size: 25px; }
+
+        @media (max-width: $screen-xs) { font-size: 20px; }
+            
+        &--name { font-weight: 500; }
+
+        &--age { font-weight: 300; }
+    }
+    
+  }

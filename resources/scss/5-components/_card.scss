@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*/
+/*#CARD STYLE*/
+/*----------------------------------------------------------------------------*/
+
+.card {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    
+    @media (max-width: $screen-sm) { margin-bottom: 15px; }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        max-width: 100%;
+        text-align: center;
+        color: white;
+
+        &:hover &--price,  &:hover &--location {
+            transition: all 0.5s ease-in-out;
+            font-size: 40px;
+        }
+
+        &:hover &--price { bottom: 70px; }
+
+        &:hover &--location { bottom: 30px; }
+
+        &--price, &--location {
+            position: absolute;
+            left: 0;
+            right: 0;
+            font-weight: 200;
+            font-size: 24px;
+            transition: all 0.7s ease-out;
+        }
+
+        &--price { bottom: 40px; }
+
+        &--location { bottom: 10px; }
+    }
+
+    &__date {
+        text-align: start;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 2.2;
+        color: rgba(4, 14, 39, 0.6)
+    }
+
+    &__title {
+        width: 30%;
+        text-align: start;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.41;
+        color: #040E27;
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: $screen-md) {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            opacity: 0.7;
+        }
+    }
+    
+    &__gradient {
+        max-width: 100%;
+        display: inline-block;
+        position: relative;
+        background: linear-gradient(180deg, rgba(6, 10, 64, 0) 60.69%, rgba(6, 10, 64, 0.75) 100%);
+        transition: all 0.7s ease-in-out;
+
+        &--btn { cursor: pointer; }
+
+        img {      
+            display: block;
+            position:relative;
+            z-index:-1;
+            max-width:100%;
+        }      
+    }
+}
+
+

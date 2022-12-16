@@ -1,0 +1,134 @@
+/*----------------------------------------------------------------------------*/
+/*#TYPOGRAPHY STYLE*/
+/*----------------------------------------------------------------------------*/
+
+
+body {
+  font-family: Roboto,'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $default-txt-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+h5 {  font-family: "Josefin Sans", sans-serif; }
+
+h1 {
+  width: 80%;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 88px;
+  line-height: 1.13;
+ 
+  @media (max-width: $screen-xl) { font-size: 75px; }
+
+  @media (max-width: $screen-lg) { 
+    font-size: 65px; 
+    line-height: 1.06;
+  }
+
+  @media (max-width: $screen-md) { 
+    font-size: 55px; 
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) { 
+    font-size: 45px; 
+    line-height: 1.1; 
+    margin-bottom: 10px; 
+  }
+}
+
+h2 { font-size: 50px; }
+
+h3 { 
+  font-family: Roboto,'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: $header-dark;
+
+  @media (max-width: $screen-xl) { font-size: 30px; }
+  
+  @media (max-width: $screen-lg) { font-size: 28px; }
+
+  @media (max-width: $screen-md) { font-size: 25px; }
+
+  @media (max-width: $screen-sm) { font-size: 23px; }
+}
+
+h4 { 
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  color: #040e27;
+
+  @media (max-width: $screen-xl) { font-size: 28px; }
+
+  @media (max-width: $screen-lg) { font-size: 26px; }
+
+  @media (max-width: $screen-md) { font-size: 24px; }
+  
+  @media (max-width: $screen-sm) { font-size: 22px; }
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 3.8;
+  color: #FFFFFF;
+
+  @media (max-width: $screen-sm) { line-height: 3; }
+}
+
+h6 { font-size: 20px; }
+
+ul, ol {
+  font-size: 0;
+  line-height: 0;
+}
+
+p,
+ul li,
+ol li {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.txt {
+    font-size: 32px;
+    line-height: 1.31;
+  
+    @media (max-width: $screen-xl) { font-size: 30px; }
+  
+    @media (max-width: $screen-lg) { font-size: 27px; }
+  
+    @media (max-width: $screen-md) { font-size: 23px; }
+  
+    @media (max-width: $screen-sm) { font-size: 22px; }
+  
+    &--gray { color: rgba(6, 10, 64, 0.5); }
+
+    &--darkblue { color: #040e27; }
+    
+    &--lightgray { color: rgba(0, 0, 0, 0.55); }
+
+    &--width {
+      @media (max-width: $screen-xl) { width: 60%; }
+  
+      @media (max-width: $screen-lg) { width: 70%; }
+  
+      @media (max-width: $screen-md) { 
+        margin-left: auto; 
+        margin-right: auto;
+      }
+  
+      @media (max-width: $screen-xs) { width: 100%; }
+    }
+}
+
