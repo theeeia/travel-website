@@ -3,48 +3,55 @@
 /*----------------------------------------------------------------------------*/
 
 .swiper {
-    width: 100%;
-    padding-bottom: 20px;
-    --swiper-navigation-color:#fff;
-    --swiper-pagination-bullet-horizontal-gap: 10px;
-    --swiper-pagination-color: #FFC800;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-size: 15px;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-inactive-color: black;
-   
-    &-pos {
-        position: relative;
-            --swiper-navigation-size: 20px;           
+  width: 100%;
+  padding-bottom: 20px;
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+  --swiper-pagination-color: #ffc800;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: black;
+
+  &-pos {
+    position: relative;
+    --swiper-navigation-size: 20px;
+  }
+
+  &-wrapper {
+    padding-bottom: 50px;
+  }
+
+  &-button-prev {
+    top: 30%;
+    left: -6%;
+    padding: 30px;
+    margin-top: 10px;
+    background-color: #040e27;
+
+    @media (max-width: $screen-xxl) {
+      left: 20px;
     }
 
-    &-wrapper { padding-bottom: 50px; }
+    &::after {
+      content: url(../images/arrow.svg);
+    }
+  }
 
-    &-button-prev {  
-        top: 30%;
-        left: -6%;
-        padding: 30px;
-        margin-top: 10px;
-        background-color: #040e27;  
+  &-button-next {
+    top: 30%;
+    right: -6%;
+    padding: 30px;
+    margin-top: 10px;
+    background-color: #040e27;
 
-        @media (max-width: $screen-xxl) { left: 20px; }
-
-        &::after { content: url(/assets/images/arrow.svg); }            
+    @media (max-width: $screen-xxl) {
+      right: 20px;
     }
 
-    &-button-next {  
-        top: 30%;
-        right: -6%;
-        padding: 30px;
-        margin-top: 10px;
-        background-color: #040e27;  
-        
-        @media (max-width: $screen-xxl) { right: 20px; }
-
-        &::after {
-            content: url(/assets/images/arrow.svg);
-            transform: rotate(180deg);
-        }
+    &::after {
+      content: url(../images/arrow.svg);
+      transform: rotate(180deg);
     }
+  }
 }
-
